@@ -19,15 +19,31 @@ Vicenza Development Investment Joint Stock Company specializes in industrial aut
 
 ## Repository Naming Convention
 
-To ensure consistency across 14+ repositories, we use the following prefixes:
+Every repository is named after the project it belongs to, the part of the system it holds, and
+who it is built for:
 
-| Prefix      | Purpose                                       |
-| ----------- | --------------------------------------------- |
-| `firmware-` | Embedded systems and microcontroller code     |
-| `hardware-` | Circuit designs and mechanical specifications |
-| `software-` | Desktop or backend application logic          |
-| `website-`  | Web platforms and portals                     |
-| `vector-`   | Design assets and graphical resources         |
+```
+<project>-<component>-<client>
+```
+
+| Part        | Meaning                                                                                  | Examples                                                    |
+| ----------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `project`   | The project the repository belongs to. Always first.                                     | `crm`, `erp`                                                |
+| `component` | The system or component within the project.                                              | `website`, `api`, `client`, `firmware`, `hardware`, `data`  |
+| `client`    | The customer or site the work is for. Always present; internal projects use `vicenza`.   | `vicenza`                                                   |
+
+Putting the project first keeps every repository of a project together in any alphabetical list,
+and one prefix finds them all:
+
+```
+crm-api-vicenza
+crm-firmware-vicenza
+crm-website-vicenza
+```
+
+Names use lowercase letters, digits and hyphens only, and never include a technology or version —
+a project keeps its name when its stack changes. Some older repositories predate this convention
+and are being renamed as they are reworked.
 
 ## Contact and Support
 
